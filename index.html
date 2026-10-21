@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050505">
+<meta name="description" content="BIGGEST SP — messagerie conçue par PAUL AI">
+<title>BIGGEST SP — Powered by PAUL AI</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="crown">♛</span><div><strong>BIGGEST SP</strong><small>Powered by <b>PAUL AI</b></small></div></div>
+  <div class="top-actions"><button class="auth-pill" id="authBtn">Connexion</button><button aria-label="Rechercher" id="searchToggle">⌕</button><button aria-label="Options" id="moreBtn">⋮</button></div>
+</header>
+<main>
+  <section id="searchBox" class="searchbox hidden"><input id="searchInput" placeholder="Rechercher une discussion…" autocomplete="off"></section>
+  <nav class="filters"><button class="filter active" data-filter="Toutes">Toutes</button><button class="filter" data-filter="Non lues">Non lues</button><button class="filter" data-filter="Groupes">Groupes</button></nav>
+  <section id="page-chats" class="page active">
+    <div class="section-title">DISCUSSIONS <span id="chatCount">6</span></div>
+    <div id="chatList" class="chat-list"></div>
+  </section>
+  <section id="page-status" class="page">
+    <div class="section-title">STATUTS <span>24 h</span></div>
+    <button class="status-own" id="addStatus"><span class="avatar gold">＋</span><span><b>Mon statut</b><small>Appuyez pour ajouter une mise à jour</small></span></button>
+    <div class="section-title sub">MISES À JOUR RÉCENTES</div>
+    <div class="status-list" id="statusList"></div>
+  </section>
+  <section id="page-calls" class="page">
+    <div class="section-title">APPELS <span>Récents</span></div>
+    <div id="callList" class="call-list"></div>
+    <p class="note">Prototype : les appels audio/vidéo en direct nécessitent un serveur et une infrastructure d’appel.</p>
+  </section>
+  <section id="page-communities" class="page">
+    <div class="section-title">COMMUNAUTÉS <span>BIGGEST</span></div>
+    <article class="community-card"><div class="community-icon">♛</div><div><b>Communauté BIGGEST</b><small>Bienvenue dans ton espace.</small><small>Les communautés réelles nécessitent un backend.</small></div></article>
+    <button class="primary wide" id="createCommunity">＋ Créer une communauté (démo)</button>
+  </section>
+  <section id="page-settings" class="page">
+    <div class="profile"><div class="lion">♛</div><div><b>Mr Biggest</b><small>Profil local · Powered by PAUL AI</small></div><button id="editProfile">✎</button></div>
+    <div class="section-title">PARAMÈTRES</div>
+    <button class="setting" data-info="Compte"><span>♙</span><div><b>Compte</b><small>Profil et confidentialité</small></div><i>›</i></button>
+    <button class="setting" data-info="Discussions"><span>▤</span><div><b>Discussions</b><small>Thème noir et or</small></div><i>›</i></button>
+    <button class="setting" data-info="Notifications"><span>♟</span><div><b>Notifications</b><small>Préférences de notification</small></div><i>›</i></button>
+    <button class="setting" data-info="Stockage et données"><span>◉</span><div><b>Stockage et données</b><small>Options de données</small></div><i>›</i></button>
+    <button class="setting" data-info="Confidentialité"><span>♧</span><div><b>Confidentialité</b><small>Options de confidentialité</small></div><i>›</i></button>
+    <div class="powered">BIGGEST SP v0.1<br><small>Powered by PAUL AI</small><p>Votre monde, vos conversations, votre priorité.</p></div>
+  </section>
+</main>
+<nav class="bottom-nav">
+  <button class="nav-item selected" data-page="chats"><span>▣</span>Discussions</button>
+  <button class="nav-item" data-page="status"><span>◉</span>Statut</button>
+  <button class="nav-item" data-page="calls"><span>☎</span>Appels</button>
+  <button class="nav-item" data-page="communities"><span>♟</span>Communautés</button>
+  <button class="nav-item" data-page="settings"><span>⚙</span>Réglages</button>
+</nav>
+<button class="fab" id="newChat" aria-label="Nouvelle discussion">＋</button>
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true"><div class="modal-card"><button class="close" id="closeModal">×</button><h2 id="modalTitle">BIGGEST SP</h2><div id="modalBody"></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.4"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

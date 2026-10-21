@@ -1,0 +1,10 @@
+{
+  "name": "BIGGEST SP",
+  "short_name": "BIGGEST SP",
+  "description": "Messagerie BIGGEST SP — Powered by PAUL AI",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "icons": []
+}
